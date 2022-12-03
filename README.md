@@ -30,6 +30,8 @@ mvn clean test
 allure.bat serve allure-results
 ```
 
+If allure not installed in your machine you can follow [these docs](https://docs.qameta.io/allure/#_get_started) to install
+
 ## Other deliverables
 
 - [Testcases document for Amazon search text box.](https://docs.google.com/spreadsheets/d/1F7JL9oBDhTJ1ovrCDvDrsvNwluE92OiQmld1glAIVdU/edit?usp=sharing)
