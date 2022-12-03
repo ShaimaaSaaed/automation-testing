@@ -7,12 +7,15 @@ This is automated test-case for Sign-up for website https://automationexercise.c
 	- Random Genrating data using [JAVA Faker](https://github.com/DiUS/java-faker)
 -  Design Pattern: POM
 	- Page Object Model (POM)  is a design pattern, popularly used in test automation that creates Object Repository for web UI elements. The advantage of the model is that it reduces code duplication and improves test maintenance.
-- Test reporting: [Allure Framework](https://docs.qameta.io/allure/) 
+- Test reporting: [Allure Framework](https://docs.qameta.io/allure/) .
 
-The test do the following steps:
+### The test do the following steps:
 - Open above website.
 - Signup and send all registration test data.
 - After complete signup, Sign out from the website.
+
+
+Driver is compatible on both Mac OS and Windows.
 
 ### To Run the test:
 - Clone the repo
@@ -26,6 +29,10 @@ mvn clean test
 ```
 - The reports will be generated under `allure-results` folder
 - To View reports run the following command:
+```
+allure serve allure-results
+```
+for Windows run:
 ```
 allure.bat serve allure-results
 ```
