@@ -15,10 +15,17 @@ public class TestBase {
 	@BeforeSuite
 	public void startDriver()
 	{
-		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Resources\\chromedriver.exe");
-		System.out.println(System.getProperty("user.dir"));
+		System.out.println("----------------------------------------");
+		System.out.println(System.getProperty("os.name"));
+		System.out.println("----------------------------------------");
+		
+		if (System.getProperty("os.name").contains("Mac OS X")) {
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/chromedriver");
 
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
+		} else {
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
+		}
+
 		driver = new ChromeDriver(); 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
@@ -30,8 +37,5 @@ public class TestBase {
 	{
 		driver.quit();
 	}
-
-
-
 
 }

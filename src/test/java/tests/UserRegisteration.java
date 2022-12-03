@@ -33,7 +33,7 @@ public class UserRegisteration extends TestBase
 		Faker fakerData = new Faker();
 
 		String Name = fakerData.name().firstName();
-		String Email = fakerData.name().firstName()+"@gmail.com";
+		String Email = fakerData.internet().emailAddress();
 		String password =fakerData.number().digits(8).toString();
 		String day = "7";
 		String month = "March";
